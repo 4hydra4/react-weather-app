@@ -10,7 +10,7 @@ function WeatherCard({ weatherData }) {
     <div className="container-fluid">
       <div
         className="card shadow rounded"
-        style={{ width: "15rem", textAlign: "center" }}
+        style={{ width: "14rem", textAlign: "center" }}
       >
         <img
           src={`http://openweathermap.org/img/wn/${iconID}@2x.png`}

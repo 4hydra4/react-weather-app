@@ -1,8 +1,8 @@
 import WeatherCard from "./components/WeatherCard";
 import CitySelector from "./components/CitySelector";
 import "./App.css";
-import { useEffect, useState } from "react";
-import { API_KEY } from "./apis/config";
+import { useState } from "react";
+// import { API_KEY } from "./apis/config";
 
 function App() {
   const [weatherData, setWeatherData] = useState([]);
@@ -21,6 +21,7 @@ function App() {
   //   }
   //   fetchAPI();
   // }, []);
+  const API_KEY = process.env.REACT_APP_API_KEY;
 
   const fetchAPI = async (city) => {
     const result = await fetch(
@@ -39,16 +40,10 @@ function App() {
         iconID: res.list[i].weather[0].icon,
       });
     }
-    // console.log(data);
+    
     if (data.length) {
       setWeatherData(data);
     }
-
-    // data.forEach(element => {
-    //   setWeatherList([...weatherList, element])
-    // });
-
-    // setWeatherList(weatherList.push(data));
 
  
     // if (res) {
