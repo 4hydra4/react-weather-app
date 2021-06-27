@@ -20,7 +20,7 @@ function WeatherCard({ weatherData }) {
         <div className="card-body">
           <h4 className="card-text">{description}</h4>
           <p className="card-text"> {date.toLocaleDateString()}</p>
-          <p className="card-text">Main Temperature: {mainTemp} &deg;C</p>
+          <p className="card-text">Temperature: {mainTemp} &deg;C</p>
           <p className="card-text">Feels Like: {feelsLike} &deg;C</p>
         </div>
       </div>

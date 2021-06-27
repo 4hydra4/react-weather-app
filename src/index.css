@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+.weatherList {
+  display: flex;
+  padding: 20px;
+}
+
 .card {
   margin-top: 10px;
 }
