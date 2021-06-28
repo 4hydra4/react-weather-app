@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-
 function WeatherCard({ weatherData }) {
-  
   const { dt, description, mainTemp, feelsLike, iconID } = weatherData;
-  const date = new Date(dt*1000);
+  const date = new Date(dt * 1000);
 
   return (
     <div className="container-fluid">
@@ -25,7 +23,7 @@ function WeatherCard({ weatherData }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default WeatherCard;

@@ -6,7 +6,14 @@ function CitySelector({ fetchAPI }) {
   function searchCity(e) {
     e.preventDefault();
     fetchAPI(city);
+    setCity("");
   }
+  // When user hits the 'enter' key, display the result
+  const handleKeyPress = (e) => {
+    if (e.keyCode === 13) {
+      fetchAPI(city);
+    }
+  };
 
   const handleChange = (e) => {
     setCity(e.target.value);
@@ -21,6 +28,7 @@ function CitySelector({ fetchAPI }) {
             className="form-control form-input"
             placeholder="Enter your City"
             onChange={handleChange}
+            onKeyDown={handleKeyPress}
             id="search-city"
             value={city}
           />
